@@ -27,7 +27,7 @@ complete the game in as few moves as possible.
 
 Here's a sneak peak of what you'll be making:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/l2j14fyTqUQ" frameborder="0" allowfullscreen></iframe>
+[![Lights Out video](http://img.youtube.com/vi/l2j14fyTqUQ/0.jpg)](https://www.youtube.com/watch?v=l2j14fyTqUQ)
 
 # What you'll need
 
