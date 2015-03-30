@@ -25,7 +25,7 @@ that is off, it toggles on. Simple. However, when you toggle a light, the adjace
 their current state. The game is over when all of the lights are out. The aim is to
 complete the game in as few moves as possible.
 
-Here's a sneak peak of what you'll be making:
+Here's a sneak peak of what you'll be making (click the picture to play video):
 
 [![Lights Out video](http://img.youtube.com/vi/l2j14fyTqUQ/0.jpg)](https://www.youtube.com/watch?v=l2j14fyTqUQ)
 
