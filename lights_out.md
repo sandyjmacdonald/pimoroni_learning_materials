@@ -1,8 +1,4 @@
----
-layout: post
-title: Explorer HAT Pro
-tags: ["raspberry pi","python","pimoroni","explorer hat","explorer hat pro","tutorial"]
----
+# Create a fun little game with the Explorer HAT Pro and event-driven programming
 
 This introductory lesson will show you how you can use a little bit of event-driven
 programming (wait for event to happen, then do something) to create a fun little 
