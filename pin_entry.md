@@ -1,4 +1,4 @@
-# Create a PIN entry system with the Explorer HAT Pro
+# Create a PIN entry system with Explorer HAT
 
 This beginners tutorial will teach you how to combine a couple of different output 
 devices with the capacitative touch buttons on the 
