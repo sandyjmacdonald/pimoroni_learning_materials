@@ -1,7 +1,7 @@
 # Create a PIN entry system with Explorer HAT
 
 This beginners tutorial will teach you how to combine a couple of different output 
-devices with the capacitative touch buttons on the 
+devices with the capacitive touch buttons on the 
 [Pimoroni Explorer HAT/Explorer HAT Pro](http://shop.pimoroni.com/products/explorer-hat),
 to create a fun little PIN entry system that will flash LEDs and buzz a buzzer when
 a correct/incorrect code is entered.
@@ -16,7 +16,7 @@ Here's what you'll need:
 * [Pimoroni Explorer HAT/Explorer HAT Pro](http://shop.pimoroni.com/products/explorer-hat)
 * A handful of 470 Ω resistors (at least three)
 * A couple of coloured 5mm LEDs (ideally green and red)
-* A piezo electric buzzer
+* A piezoelectric buzzer
 * A bunch of jumper leads
 
 **Note that you can get all of these in the Pimoroni Explorer HAT Pro parts kit.**
@@ -32,7 +32,7 @@ sudo apt-get install python-pip
 sudo pip install explorerhat
 ```
 
-Those commands will install set up I2C and install the Explorer HAT Python library.
+Those commands will set up I2C and install the Explorer HAT Python library.
 
 Next, you'll want to plug your Explorer HAT into the 40 pin GPIO connector on your
 Raspberry Pi. You can check it's working by typing the following straight in the 
@@ -182,7 +182,7 @@ idea to have some very short delays when running this kind of code to stop thing
 from getting crazy. I tend to use a 0.05 second delay.
 
 We `import explorerhat as eh` simply to saving us typing `explorerhat` in full every
-time we need to use one of it's functions or classes.
+time we need to use one of its functions or classes.
 
 Last, we need `RPi.GPIO` to control our piezo buzzer with PWM.
 
@@ -199,7 +199,7 @@ setup GPIO pin 18 as an output. The PWM channel on the Explorer HAT is connected
 18 on the Raspberry Pi, to which we'll connect our buzzer.
 
 The last line creates a PWM object called `buzzer` using pin 18 and sets the frequency to
-400 Hz. We can use this `buzzer` object to control out buzzer later.
+400 Hz. We can use this `buzzer` object to control our buzzer later.
 
 ## Setting our PIN
 
@@ -208,8 +208,8 @@ correct_pin = [1,2,3,4]
 pin = []
 ```
 
-We create list with the correct PIN that we want to match, and an empty list to which
-we can add the entered numbers. Whenver four digits have been added, we'll empty this
+We create a list with the correct PIN that we want to match, and an empty list to which
+we can add the entered numbers. Whenever four digits have been added, we'll empty this
 list.
 
 ## Entering digits
@@ -227,7 +227,7 @@ def add_to_pin(channel, event):
 ```
 
 We create a short function to do three things: detect which button has been pressed,
-add that number to out `pin` list, and blink the curresponding light briefly to give
+add that number to our `pin` list, and blink the corresponding light briefly to give
 some visual feedback when the button has been pressed.
 
 We'll pass this function to the `eh.touch.pressed()` method later and in turn it will
