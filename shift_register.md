@@ -72,6 +72,8 @@ different patterns to use with LEDs.
 Here's how to clone and install my fork:
 
 ```bash
+curl get.pimoroni.com/i2c | bash
+sudo apt-get install python-smbus
 git clone https://github.com/sandyjmacdonald/explorer-hat.git
 cd explorer-hat/library
 sudo python setup.py install
