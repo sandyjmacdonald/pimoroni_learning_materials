@@ -44,9 +44,9 @@ We need quite a few things to set this all up:
 * A mini breadboard or 400 point (half-size) breadboard
 * A bunch of jumper leads
 
-Note that you can get all of this, with the exception of the Raspberry Pi, Explorer HAT
+**Note that you can get all of this, with the exception of the Raspberry Pi, Explorer HAT
 and mini breadboard, in the 
-[Explorer HAT Pro parts kit](http://shop.pimoroni.com/products/explorer-hat-pro-parts-kit).
+[Explorer HAT Pro parts kit](http://shop.pimoroni.com/products/explorer-hat-pro-parts-kit).**
 
 I've set this up a couple of different ways. In the wiring diagram below, I've put the 
 LEDs and voltage-limiting resistors on one mini breadboard and the shift register and
