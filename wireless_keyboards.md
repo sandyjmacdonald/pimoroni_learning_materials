@@ -1,9 +1,9 @@
 # Wireless keyboards
 
 This guide will show you how to set up the Rii wireless keyboards with your
-Raspberry Pi. There are two different versions---a
+Raspberry Pi. There are two different versions - a
 [2.4 GHz wireless keyboard with trackpad](https://shop.pimoroni.com/products/ultra-slim-2-4ghz-keyboard-with-touchpad),
-and a [Bluetooth wireless keyboard](https://shop.pimoroni.com/products/ultra-slim-bluetooth-keyboard)---
+and a [Bluetooth wireless keyboard](https://shop.pimoroni.com/products/ultra-slim-bluetooth-keyboard) -
 which both require slightly different setups.
 
 ![Wireless keyboard with trackpad](images/wireless_keyboard.jpg)
