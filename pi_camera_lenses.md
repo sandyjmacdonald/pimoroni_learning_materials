@@ -15,6 +15,8 @@ The lenses just clip over the Raspberry Pi camera board, as in the photo below.
 You might want to fiddle about with the placement of the lens to get it just
 the way you want.
 
+![Lens on camera](images/lens_camera.jpg)
+
 ## Setting the camera up
 
 You'll need to connect the camera to your Raspberry Pi with the ribbon cable,
