@@ -1,4 +1,4 @@
-# Wireless keyboards
+## Wireless keyboards
 
 This guide will show you how to set up the Rii wireless keyboards with your
 Raspberry Pi. There are two different versions - a
