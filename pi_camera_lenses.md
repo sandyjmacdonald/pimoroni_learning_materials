@@ -4,18 +4,33 @@ This short guide will show describe how to use the set of three camera lenses,
 available in the Pimoroni shop, with the Raspberry Pi camera.
 
 As you'll see in the photo below, there are three lenses, although when you
-first open the box, the fisheye lens will be screwed onto the macro lens, so
-you'll need to unscrew it to use the macro. Took me a while to work that one
-out! To use the wide angle lens, just unscrew the fisheye and screw the wide
-angle lens on.
+first open the box, the fisheye lens will be screwed onto the macro lens. I'll
+explain how to setup the different lenses below.
 
 ![Camera lenses](images/lenses.jpg)
 
-The lenses just clip over the Raspberry Pi camera board, as in the photo below.
-You might want to fiddle about with the placement of the lens to get it just
-the way you want.
+The lenses just clip over the Raspberry Pi camera board. You might want to
+fiddle about with the placement of the lens to get it just the way you want.
 
-![Lens on camera](images/lens_camera.jpg)
+## Lens setups
+
+The three different lens setups are shown below.
+
+![Lens setups](images/lenses_camera.png)
+
+Topmost is the **macro lens**. As the lenses come in the box, the fisheye lens is
+screwed onto the macro lens, so you'll need to unscrew it first to use the
+macro. The macro lens is ideal for really close up photos, with a focal length
+of about 5 cm. You'll see some examples of images from the macro lens below.
+
+In the centre is the **wide angle lens**. To use this one, you'll need to unscrew
+the macro lens first and then screw on the wide angle. It can be used to get a
+really wide field of view and is perfect for something like a CCTV camera. The
+field of view should be close to 180 degrees.
+
+At the bottom is the **fisheye lens**. The fisheye is used in combination with
+the macro lens and needs to be screwed on top of it. It's more of a novelty
+lens, distorting and warping the image at the centre, hence the name fisheye.
 
 ## Setting the camera up
 
