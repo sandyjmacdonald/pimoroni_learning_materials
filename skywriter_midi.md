@@ -175,3 +175,53 @@ lines of code and the help of some really nice libraries.
 
 Now that we're generating all of those midi notes and velocities, we need
 somewhere to send them.
+
+Here, we'll use [SunVox](http://www.warmplace.ru/soft/sunvox/), a free,
+cross-platform software synth. Download it
+[here](http://www.warmplace.ru/soft/sunvox/sunvox-1.9b.zip), install it and then
+open it.
+
+There's a default demo patch that will load up when you open SunVox, but click
+on the menu - the little icon in the top left corner - and then click `New
+project` and then click `Empty` in the dialog box that pops up to start a new
+project.
+
+We'll create a simple patch with an analog generator and a filter to make the
+sound a bit more interesting.
+
+The new, empty project will open with an output module in the centre of the
+area where you'll build your patch. New modules can be added by right clicking
+in the patch area and then selecting `New module` in the menu that appears.
+You'll see a long list of different types of module. We'll select an `Analog
+generator` that will translate our midi messages into notes. Select it, and click
+`OK` to add it to the patch area.
+
+Next, we'll add a `Filter Pro` module, in a similar way to the module we added
+above. To connect the modules, click and drag from the first module to the
+second while holding the shift key. Connect the `Analog generator` to the
+`Filter Pro` and the `Filter Pro` to the `Output` module. You'll see how I set
+mine up below.
+
+![SunVox module](images/skywriter_sunvox_module.jpg)
+
+The last thing we need to do is to switch on the midi input, by going into the
+menu (click the icon in the top left corner), selecting `Preferences` and then
+the `Midi` tab. In `Midi controller 1` leave the channel on channel 1 and
+then select your midi device by clicking where it says `Midi controller 1` -
+mine was called something like `IAC Driver IAC Bus 1...`.
+
+Here's what my preferences looked like.
+
+![SunVox prefs](images/skywriter_sunvox_prefs.jpg)
+
+Now wave your hand above the Skywriter and hear the midi goodness!
+
+Of course, you could send these midi notes anywhere. I've succesfully used it
+with Ableton Live and even with a couple of different hardware synths - the
+Teenage Engineering OP-1 and the Korg Volca Keys, although you'll need a midi
+interface if your synth uses a midi connector rather than midi over USB.
+
+There's plenty of opportunity to adapt this to your liking. I suggest that you
+try narrowing the range of notes to give you more fine-grained control over the
+instrument, or try using it as a control surface by generating midi control
+change (CC) messages rather than notes.
