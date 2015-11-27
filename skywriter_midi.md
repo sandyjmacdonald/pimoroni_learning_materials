@@ -74,6 +74,8 @@ It's really as simple as installing the software, opening it, selecting the
 serial port, which will be the same USB port that you selected in the Arduino
 IDE, and then selecting the midi out destination. More on that soon.
 
+![Hairless prefs](images/hairless_midi.jpg)
+
 ## Our Arduino sketch
 
 At the very top of our sketch, we import the libraries that we'll be using:
