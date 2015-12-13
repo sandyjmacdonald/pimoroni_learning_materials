@@ -1,5 +1,7 @@
 ## Build a Twitter ticker with a Raspberry Pi Zero and Scroll pHAT
 
+![Twitter Scroll pHAT](images/twitter_scroll_phat.gif)
+
 Here, we'll build a tiny Twitter ticker that will show the most recent
 tweets containing the hashtag of your choice, using a Raspberry Pi Zero and
 the nifty Scroll pHAT LED matrix.
