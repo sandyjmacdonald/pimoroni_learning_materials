@@ -19,7 +19,12 @@ brightness of an LED matrix then you get some *funky* patterns.
 All you'll need is:
 
 * A Raspberry Pi A+ or B+
-* A Pimoroni [Unicorn HAT](http://shop.pimoroni.com/products/unicorn-hat)
+* A Unicorn HAT
+
+You'll need to do all of the following in the terminal. If you've booted
+straight to the desktop, you'll find it in Menu -> Accessories -> Terminal.
+
+![Terminal](images/terminal.jpg)
 
 As always, do a `sudo apt-get update` and `sudo apt-get upgrade` to get
 everything up-to-date on your Raspberry Pi.
