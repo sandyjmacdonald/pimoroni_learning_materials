@@ -162,11 +162,11 @@ Scroll pHAT:
 
 ```python
 def scroll_tweet(status):
-    status = '@%s: %s    ' % (status.user.screen_name.upper(), status.text.upper())
-    status = status.encode('ascii', 'ignore').decode('ascii') + '          '
+    status = '@%s: %s' % (status.user.screen_name.upper(), status.text.upper())
+    status = '>>>>>     ' + status.encode('ascii', 'ignore').decode('ascii') + '     '
     scrollphat.write_string(status)
     status_length = scrollphat.buffer_len()
-    while scrollphat.buffer_len():
+    while status_length > 0:
         scrollphat.scroll()
         time.sleep(0.1)
         status_length -= 1
@@ -184,7 +184,7 @@ We'll also convert the text to upper case using the `.upper()` method that you
 can use on strings, to make the text a bit more legible.
 
 ```python
-status = '>>>> @%s: %s    ' % (status.user.screen_name.upper(), status.text.upper())
+status = '@%s: %s' % (status.user.screen_name.upper(), status.text.upper())
 ```
 
 Because tweets often contain special characters, like emojis, that can't be
@@ -194,7 +194,7 @@ tweet to pad it from the next one and some chevrons to the beginning to pre-warn
 us when a tweet is coming through:
 
 ```python
-status = status.encode('ascii', 'ignore').decode('ascii') + '          '
+status = '>>>>>     ' + status.encode('ascii', 'ignore').decode('ascii') + '     '
 ```
 
 Next, we write the reformatted tweet to the Scroll pHAT:
@@ -218,7 +218,7 @@ Then, it's just a matter of scrolling in a `while` loop until we're all the way
 through the string, with a delay of a tenth of a second between each step:
 
 ```python
-while scrollphat.buffer_len():
+while status_length > 0:
     scrollphat.scroll()
     time.sleep(0.1)
     status_length -= 1
