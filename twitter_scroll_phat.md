@@ -122,6 +122,12 @@ import tweepy
 import scrollphat
 ```
 
+We'll clear the display first, in case anything got stuck there previously:
+
+```python
+scrollphat.clear()
+```
+
 Then we'll set the brightness of Scroll pHAT to something that won't indelibly
 burn the tweets into our retinas:
 
@@ -162,8 +168,8 @@ Scroll pHAT:
 
 ```python
 def scroll_tweet(status):
-    status = '@%s: %s' % (status.user.screen_name.upper(), status.text.upper())
-    status = '>>>>>     ' + status.encode('ascii', 'ignore').decode('ascii') + '     '
+    status = '     >>>>>     @%s: %s     ' % (status.user.screen_name.upper(), status.text.upper())
+    status = status.encode('ascii', 'ignore').decode('ascii')
     scrollphat.write_string(status)
     status_length = scrollphat.buffer_len()
     while status_length > 0:
@@ -181,20 +187,20 @@ The `status` object has all kinds of attributes like the user id, time stamp,
 the tweet text, etc. We're going to use the `%s` string placeholders to reformat
 the tweet so that it has the user name, a colon, and then the text of the tweet.
 We'll also convert the text to upper case using the `.upper()` method that you
-can use on strings, to make the text a bit more legible.
+can use on strings, to make the text a bit more legible. Lastly, we'll add some
+blank spaces after the tweet to pad it from the next one and some chevrons to
+the beginning to pre-warn us when a tweet is coming through:
 
 ```python
-status = '@%s: %s' % (status.user.screen_name.upper(), status.text.upper())
+status = '     >>>>>     @%s: %s     ' % (status.user.screen_name.upper(), status.text.upper())
 ```
 
 Because tweets often contain special characters, like emojis, that can't be
 encoded by the Scroll pHAT character set, we have a cunning little line of code
-that will ignore those characters and also adds some blank spaces after the
-tweet to pad it from the next one and some chevrons to the beginning to pre-warn
-us when a tweet is coming through:
+that will ignore those characters:
 
 ```python
-status = '>>>>>     ' + status.encode('ascii', 'ignore').decode('ascii') + '     '
+status = status.encode('ascii', 'ignore').decode('ascii')
 ```
 
 Next, we write the reformatted tweet to the Scroll pHAT:
@@ -257,6 +263,19 @@ a Python list of several different search terms, any of which can be matched:
 
 ```python
 myStream.filter(track=['#raspberrypi'], async=False)
+```
+
+If you like, you can wrap all of that code inside a `try` and `except` to allow
+you to exit cleanly and clear the Scroll pHAT display on exit, like this:
+
+```python
+while True:
+    try:
+        ## PUT ALL OF THE ABOVE CODE
+        ## APART FROM THE IMPORTS IN HERE.
+    except KeyboardInterrupt:
+        scrollphat.clear()
+        sys.exit(-1)
 ```
 
 ## Running the code
